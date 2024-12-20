@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mountain Travel Website Landing Page</title>
+
+    <!-- external css file adding -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  #landing {
+    background: url("./images/mountain.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    opacity: 0.7;
+  }
+  #landing h1 {
+    text-align: center;
+    font-size: 60px;
+    color:black;
+    padding-top: 250px;
+  }
+  #landing p {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    padding-top: 20px;
+    font-style: italic;
+  }
+  button {
+    padding: 8px 40px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 40%;
+    border-radius: 10px;
+  }
+  
+  #locations {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #locations h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index:-2 ;
+    box-shadow:0,0,10px;
+    
+
+  }
+  
+  .card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+    position: relative;
+    
+  }
+  .card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    z-index: 2;
+  }
+  
+  
+  .card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    
+  }
+  
+  .card h3 {
+    margin: 10px 0;
+  }
+  
+  .card p {
+    padding: 0 10px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .card-btn {
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .card-btn:hover {
+    background: #0056b3;
+  }
+  
+  #testimonials {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  .testimonial-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 50px 20px;
+  }
+  .testimonial-header h1{
+      font-size: 3rem;
+  }
+  .testimonial-header p{
+      font-size: 1.3rem;
+      margin-top: 10px;
+  }
+  
+  .testimonial-cards{
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  .testimonial-card{
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;  
+      text-align: center;
+      flex-direction: column; 
+      align-items: center;
+  }
+  
+  .testimonial-card img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+  }
+  
+  .testimonial-card h3{
+      margin: 10px 0;
+  }
+  .testimonial-text{
+      font-size: 1rem;
+      color: #555;
+      margin-top: 10px;
+      font-style: italic;
+      padding: 0px 10px;
+  }
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+  }
+  .footer-info h4 {
+    margin: 0 0 15px;
+  }
+  .footer-info p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Mountain Travel</div>
+        <ul class="nav-links">
+          <li><a href="#landing">Home</a></li>
+          <li><a href="#locations">Popular Destinations</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- landing page start -->
+    <section id="landing">
+      <h1>Explore the Mighty Mountains</h1>
+      <p>Plan your next adventure with our curated mountain destinations</p>
+      <button>Know More..</button>
+    </section>
+    <!-- landing page ends -->
+    <hr />
+
+    <!-- location card page starts here -->
+    <section id="locations">
+      <h2>Popular Destinations</h2>
+      <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="./images/photo1.jpeg" alt="Mountains" />
+          <h3>Mountains</h3>
+          <p>Stunning Snow Mountain Landscape.</p>
+          <a href="./form.html"><button class="card-btn">Book Now</button></a>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="./images/photo2.jpeg" alt="Aurora Borealis" />
+          <h3>Aurora Borealis</h3>
+          <p>Spellbound by the Dancing Lights.</p>
+          <a href="./form.html"><button class="card-btn">Book Now</button></a>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="./images/photo3.webp" alt="Water Falls" />
+          <h3>Aesthetic Mountains</h3>
+          <p>Last in the Magic of color.</p>
+          <a href="./form.html"><button class="card-btn">Book Now</button></a>
+        </div>
+        <!-- card 4   -->
+        <div class="card">
+          <img src="./images/photo4.jpg" alt="Himalayas" />
+          <h3>Beach view</h3>
+          <p>view as clear as Water.</p>
+          <a href="./form.html"><button class="card-btn">Book Now</button></a>
+        </div>
+      </div>
+    </section>
+    <!-- location card page ends here -->
+     <hr>
+    <!-- testimonial section starts here -->
+
+
+<section id="testimonials">
+    <header class="testimonial-header">
+        <h1>What Our Travelers Say</h1>
+        <p>Great Way to Explore the World with them.</p>
+    </header>
+
+    <div class="testimonial-cards">
+        <div class="testimonial-card">
+            <img src="./images/mypic.jpg" alt="user">
+            <h3>AITAM</h3>
+            <p class="testimonial-text">
+                "front end devoloper"
+            </p>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="./images/alepic.jpg" alt="user">
+            <h3>AITAM</h3>
+            <p class="testimonial-text">
+                "ui/ux designer"
+            </p>
+        </div>
+
+        
+
+        <div class="testimonial-card">
+            <img src="./images/swatpic.jpg" alt="user">
+            <h3>AITAM</h3>
+            <p class="testimonial-text">
+                "Backend Devoloper"
+            </p>
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="footer-info">
+            <h4>About Mountain Travel</h4>
+            <p>Explore the world by travelling your favourite places by our site.</p>
+        </div>
+        <p>&copy; 2024 copyright . all right reserved to organization</p>
+    </footer>
+  </body>
+</html>

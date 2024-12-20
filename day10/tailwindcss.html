@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #232c3b;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#232c3b;
+    padding:0px 0px;
+    position: fixed;
+    width: 97%;
+    top: 10px;
+    z-index: 1000;
+    margin-left: 0.5rem;
+  }
+  
+  .navbar .logo {
+    color: rgb(252, 251, 251);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(241, 233, 233);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f3f5f6;
+    text-decoration: underline;
+  }
+  h1{
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding-top: 10%;
+    font-size: 4rem;
+  }
+
+  p{
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .button {
+      background: #38bdf8;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #0ea5e9;
+    }
+
+    .search {
+      display: flex;
+      border-style: #dce1e6;
+      align-items: center;
+      background: #f4f5f7;
+      border-radius: 0.5rem;
+      padding: 0.8rem 1rem;
+      width: 250px;
+    }
+
+    .search input {
+      border: none;
+      background: transparent;
+      color: rgb(15, 14, 14);
+      outline: none;
+      flex: 1;
+      margin-right: 0.5rem;
+    }
+
+    .search input::placeholder {
+      color: #64748b;
+    }
+    span{
+        color:#768492;
+    }
+
+
+    
+
+    
+    </style>
+</head>
+<body>
+    <h1>Rapidly build modern websites<br>without ever leaving your HTML.</h1>
+    <p>A utility-first CSS framework packed with classes like flex, pt-4, text-center and<br> rotate-90 that can be composed to build any design, directly in your markup.</p>
+    <header>
+        <nav class="navbar">
+          <div class="logo">
+          <img src="./images/logo.png" alt="Logo" width="30">
+          <span>tailwindcss</span>
+        </div>
+    
+
+          <ul class="nav-links">
+            <li><a href="#landing">doc</a></li>
+            <li><a href="#locations">components</a></li>
+            <li><a href="#testimonials">blog</a></li>
+            <li><a href="#footer">Showcase</a></li>
+          </ul>
+        </nav>
+      </header>
+     <div class="buttons">
+        <a href="#" class="button">Get started</a>
+        <div class="search">
+          <input type="text" placeholder="Quick search...">
+          <span>CTRL K</span>
+        </div>
+      </div>
+  
+</body>
+</html>

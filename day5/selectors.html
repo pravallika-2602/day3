@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--universal selectors-->
+    <style>
+        /*
+        *{
+            color:red;
+            font-style:italic;
+            text-align:center;
+            text-transform:capitalize;
+        }*/
+       /* h1{
+            color:red;
+        }
+        p{
+            color:blue;
+        }
+        h4{
+            color:green;
+            font-style:italic;
+        }*/
+        /*
+    #heading1{
+        color:red;
+    }*/
+    /*.para{
+        color:blue;
+        font-weight:border;
+        font-size:45px;
+    }*/
+    /*group selector
+    h1,p{
+        color:red;
+    }*/
+    /*descendent selector
+    div p{
+        color:red;
+    }*/
+    /*child selector
+    span{
+        background-color: aqua;
+    }
+    div > span{
+        background-color: yellow;
+    }*/
+    /*adjacant selector*/
+    h1 + p{
+        font-style: italic;
+    }
+    /*general adjacant sibling
+    h1 ~ p{
+        color: green;
+        font-style: italic;
+    }*/
+    /*adjacant sibling selector*/
+   /* h1+p{
+        color: blue;
+        font-style: italic;
+    }*/
+    button{
+        padding: 7px 35px;
+        background-color: green;
+        border: 1px solid black;
+        border-radius: 12px;
+    }
+    button:hover{
+        background-color: red;
+        cursor:pointer;
+        border:none;
+        border-radius: 0px;
+    }
+    /*[placeholder]{
+        color:red;
+        border: 2px solid green;
+    }*/
+    input[type="text"]{
+        border:5px solid red;
+        color:yellow;
+    }
+
+    </style>
+</head>
+<body>
+    <!---
+    <h1 id="heading1">this is demom for selectors</h1>
+    <h1 id="heading2">this is demo2</h1>
+    <p>this is para</p>
+    <p class="para">this is para1</p>
+    <p class="para">this is para2</p>
+    <h4 class="para">this is demo</h4>
+    <h4>this is h4</h4>
+    <div>
+        <span>
+            span #1 in the div
+        <span>span #2 in the span thats in div tag</span>
+        </span>
+        
+    </div>
+    <span>
+        this is #3 span outside div
+    </span>-->
+   <!--- <h1>heading</h1>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>paragraph3</p>
+    <p>paragraph4</p>*/-->
+    <h1>form</h1>
+    <button>submit</button>
+    <input type="text" placeholder="Enter Your Name"/>
+    </body>
+</html>

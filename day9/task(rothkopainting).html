@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rothko Painting</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #181616; 
+        }
+
+        .rothko-painting {
+            width: 400px;
+            height: 600px;
+            background-color: #22201e;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .layer {
+            width: 100%;
+            height: 30%;
+            border-radius: 10px;
+        }
+
+        .layer.top {
+            background-color: #b0a80f; /* Deep red tone */
+        }
+
+        .layer.middle {
+            background-color: #a84028; /* Warm yellow tone */
+        }
+
+        .layer.bottom {
+            background-color: #d8633c; /* Deep blue tone */
+        }
+    </style>
+</head>
+<body>
+    <div class="rothko-painting">
+        <div class="layer top"></div>
+        <div class="layer middle"></div>
+        <div class="layer bottom"></div>
+    </div>
+</body>
+</html>
